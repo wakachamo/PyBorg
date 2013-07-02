@@ -574,9 +574,9 @@ class ModIRC(SingleServerIRCBot):
                 print "[%s] <%s> > %s> %s" % (get_time(), self.settings.myname, source, message)
                 c.privmsg(source, message)
                 # send copy to owner
-                if not source in self.owners:
-                    c.privmsg(','.join(self.owners), "(From "+source+") "+body)
-                    c.privmsg(','.join(self.owners), "(To   "+source+") "+message)
+                #if not source in self.owners:
+                    #c.privmsg(','.join(self.owners), "(From "+source+") "+body)
+                    #c.privmsg(','.join(self.owners), "(To   "+source+") "+message)
             # ctcp action priv msg
             else:
                 print "[%s] <%s> > %s> /me %s" % (get_time(), self.settings.myname, target, message)
